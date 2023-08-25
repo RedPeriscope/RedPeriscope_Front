@@ -4,9 +4,11 @@ import SimpleSlider from "../components/SimpleSlider";
 import NavBar from "../components/NavBar";
 import CategoryBar from "../components/CategoryBar";
 import SelectedCategoryBar from "../components/SelectedCategoryBar";
+import { useNavigate } from "react-router";
 
 const Main = () => {
 	const backgroundImageUrl = require("../img/mainBackgroundImg.png");
+	const navigate = useNavigate();
 
 	return (
 		<Container backgroundImageUrl={backgroundImageUrl}>
@@ -38,7 +40,9 @@ const Main = () => {
 						<SimpleSlider />
 					</PlanList>
 					<ButtonDiv>
-						<SeeAllButton>전체보기</SeeAllButton>
+						<SeeAllButton onClick={() => {
+							navigate("/all");
+						}}>전체보기</SeeAllButton>
 					</ButtonDiv>
 				</PlanDiv>
 			</MainContent>
@@ -71,6 +75,7 @@ const MainContent = styled.div`
 const CategoryBarDiv = styled.div`
 	width: 90%;
 	height: 8vh;
+	border-radius: 20px;
 	display: flex;
 	justify-content: flex-start;
 `;

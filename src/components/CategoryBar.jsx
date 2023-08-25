@@ -60,6 +60,7 @@ const CategoryBar = ({displayProperty}) => {
             key={category.displayProperty}
             category={category}
             categoryClick={checkHandler}
+            type={displayProperty}
           />
         ))}
       </Category>
@@ -69,7 +70,7 @@ const CategoryBar = ({displayProperty}) => {
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
