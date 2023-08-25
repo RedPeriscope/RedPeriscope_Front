@@ -32,6 +32,7 @@ const PlanDetail = () => {
 		// fetchData 함수 호출
 		fetchData();
 	}, []); // category가 변경될 때마다 호출
+	const imgUrl = require("../img/PlanImage.png");
 
 	return (
 		<Container>
@@ -39,39 +40,62 @@ const PlanDetail = () => {
 			<DetailContainer>
 				<Title>
 					<SelectedCategoryBar />
-					<TitleText>{item.title}</TitleText>
-					<TitleInfo>
-						{item.leader.userFullName} {item.created_at}
-					</TitleInfo>
+					<TitleText>수원 행동궁 여행</TitleText>
+					<TitleInfo>김민재 2023-08-26</TitleInfo>
 				</Title>
 				<ImageBox>
-					<img src={item.image} alt="Plan" />
+					<img src={imgUrl} alt="Plan" style={{ objectFit: "cover", width:"100%", height:"100%"}} />
 				</ImageBox>
-				<Description>{item.trip_detail}</Description>
+				<Description>
+					[수원 환상 힐링 패키지] 당신을 지친 일상에서 힐링의 여정으로
+					초대합니다. 수원의 조용한 자연 속에서 힐링을 찾을 수 있는 이 패키지는
+					온전히 당신에게 집중할 수 있는 시간을 선사합니다. 아침 해돋이를
+					맞이하며 산책을 즐기고, 푸른 호수의 물결 소리를 들으며 마음을
+					정화하세요. 온천 스파와 명상 프로그램을 통해 신체와 마음을 따뜻하게
+					녹여내어 완벽한 힐링을 경험할 수 있습니다.{"\n"} [수원 히스토리 어드벤처
+					패키지] 수원은 조선 왕조의 역사적인 유산을 지키는 곳입니다. 이
+					패키지에서는 화려한 경복궁과 후원, 그리고 아름다운 화성에서 그 역사의
+					흔적을 찾아보세요. 전통적인 한복을 입고 성곽을 걷는 독특한 경험도
+					놓치지 마세요. 지식 있는 가이드와 함께하는 투어로 수원의 역사를 깊이
+					이해하며 멋진 시간을 보낼 수 있을 것입니다. [수원 맛의 여정 패키지]
+					수원은 다양한 맛과 음식 문화로 여러분을 맞이합니다. 이 패키지는 현지
+					음식 전문 가이드와 함께 수원의 맛을 탐험하는 여정을 제안합니다. 풍성한
+					국내 최고의 음식 시장에서 재료를 골라 직접 요리하고, 현지 주민들과
+					함께 식사하는 독특한 경험을 즐기세요. 수원의 다채로운 맛을 만끽하며
+					미소와 추억을 나눌 수 있을 것입니다. 수원 여행에서 여러분을 반겨주는
+					패키지 중 하나를 선택하여 특별한 경험을 누려보세요. 역사, 자연, 음식
+					등 다양한 즐거움이 여러분을 기다리고 있습니다. 수원의 아름다운
+					순간들로 여행 가득 채워보세요!
+				</Description>
 				<Label>
 					<AiOutlineCalendar /> 모집 기한
 				</Label>
-				<Details>{item.due_date}</Details>
+				<Details>2023-08-26</Details>
 				<Label>
 					<CgProfile /> 예상 모집 인원
 				</Label>
-				<Details>{item.estimated_num}</Details>
+				<Details>10</Details>
 				<Label>
 					<BiWon /> 예상 비용(1인당)
 				</Label>
-				<Details>{item.estimated_cost}</Details>
+				<Details>130000</Details>
 				<Label>
 					<GrLocation /> 방문 장소
 				</Label>
-				<LargerDetails>{item.trip_places}</LargerDetails>
+				<LargerDetails>
+					수원화성, 방화수류정, 행리단길, 열기구 탑승
+				</LargerDetails>
 				<Label>
 					<FiMap /> 예상 숙소 지역
 				</Label>
-				<Details>{item.trip_accmdtn}</Details>
+				<Details>수원</Details>
 				<Label>
 					<BiHeadphone /> 오프너 자기소개
 				</Label>
-				<LargerDetails>{item.leader.selfIntro}</LargerDetails>
+				<LargerDetails>
+					저는 활발하고 긍정적인 성격을 가진 대학생입니다! 한국대학교에서
+					컴퓨터공학을 전공하고 있으며, 뮤지컬 관람과 액티비티가 취미입니다.
+				</LargerDetails>
 			</DetailContainer>
 		</Container>
 	);
@@ -134,6 +158,9 @@ const ImageBox = styled.div`
 	border-radius: 10px;
 	align-items: center;
 	margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Description = styled.div`

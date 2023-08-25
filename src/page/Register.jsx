@@ -13,15 +13,16 @@ import { AiFillDownCircle } from "react-icons/ai";
 import { BsPencil } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import NavBar2 from "../components/NavBar2";
 
 const Register = () => {
   const [startDate, setStartDate] = useState(new Date());
 
   return (
     <Container>
-      <NavBar />
+      <NavBar2 />
       <DetailContainer>
-        <Title>오프너 지원하기) 상세페이지 작성</Title>
+        <Title>오프너 지원 상세페이지 작성</Title>
         <Label>제목</Label>
         <DetailInput placeholder="제목 입력" />
         <Label># (필수) 필터링 해시태그 선택</Label>
@@ -111,7 +112,10 @@ const DetailContainer = styled.div`
 const Title = styled.div`
   height: 150px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  font-size: 30px;
   margin: 20px;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
 `;
