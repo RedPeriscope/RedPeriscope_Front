@@ -1,23 +1,23 @@
-# 서비스명 블라블라
+# 서비스명 Red Periscope
 
 <div align="center">
 <img width="329" alt="image" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/bfa67065-c11b-4961-a1b5-3b27cb7e873d">
 </div>
 
 # 2023th Sinchonthon
-> **신촌톤 블라블라팀** <br/>
+> **Red Periscope** <br/>
 
 ## 배포 주소
 
-> 웹페이지 주소 어쩌구 저쩌구 <br>
+> [Red Periscope Website](https://dd0709.pythonanywhere.com/) <br>
 
 ## 팀 소개
 
 |      박소영 <br/> **(기획/디자인)**       |          박영빈 <br/> **(개발/프론트엔드)**          |       정윤지 <br/> **(개발/프론트엔드)**        |       김지은  <br/> **(개발/백엔드)**       |       이재은  <br/> **(개발/백엔드)**       |       박나담  <br/> **(개발/백엔드)**       |       이건화  <br/> **(개발/백엔드)**       |                                                                                                              
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | 
 |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/5e1d7e98-b9d2-4deb-a4b6-b94a04267cef" />    |                      <img width="160px" src="https://avatars.githubusercontent.com/u/102040717?v=4" />    |                   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/c205c52a-c1e6-4f6b-8058-e7b4dd9afd80"/>   |   <img width="160px" height="160px" src="https://github.com/RedPeriscope/RedPeriscope_Front/assets/53243896/bcf06f64-a939-4087-a39c-8d607678d727" />    |   <img width="160px" src="https://github.com/RedPeriscope/RedPeriscope_Front/assets/53243896/7dc73900-8e32-4dcb-ac27-2060a2e8e8ba" />    |  <img width="160px" src="https://github.com/RedPeriscope/RedPeriscope_Front/assets/53243896/99d8d0b2-5386-4601-8b45-37c740aacbd3" />    |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/a91706e5-36e8-418e-92b3-6c9abb3dfa7c" />    |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/a91706e5-36e8-418e-92b3-6c9abb3dfa7c" />    |
-|   [zhivago-kim](https://www.linkedin.com/in/zhivago-kim)   |    [529539](https://github.com/529539)  |    [THLcode](https://github.com/THLcode)  |    [@wooseok123](https://github.com/wooseok123)  |    [@wooseok123](https://github.com/wooseok123)  |    [@wooseok123](https://github.com/wooseok123)  |    [@wooseok123](https://github.com/wooseok123)  |
-| 홍익대 경영학  | 홍익대 컴퓨터공학 | 홍익대 | 이화여대 영어교육 | 연세대 인공지능학 | 이화여대 컴퓨터공학 | 서강대 |
+|   [zhivago-kim](https://www.linkedin.com/in/zhivago-kim)   |    [529539](https://github.com/529539)  |    [@Jungyungee](https://github.com/Jungyungee)  |    [@silverjek](https://github.com/silverjek)  |    [@babywhale03](https://github.com/babywhale03)  |    [@parknadam](https://github.com/parknadam)  |    [@Gunhot](https://github.com/Gunhot)  |
+| 홍익대 경영학  | 홍익대 컴퓨터공학 | 홍익대  | 이화여대 영어교육 | 연세대 인공지능학 | 이화여대 컴퓨터공학 | 서강대 컴퓨터공학 |
 
 ## 프로젝트 소개
 
