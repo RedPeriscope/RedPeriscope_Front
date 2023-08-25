@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import NavBar from "../components/NavBar";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -12,17 +12,18 @@ import NavBar2 from "../components/NavBar2";
 import axios from "axios";
 
 const PlanDetail = () => {
+	const [item, setItem] = useState([]);
+
 	useEffect(() => {
 		// 데이터를 비동기적으로 가져오는 함수
 		async function fetchData() {
 			try {
-
 				// Axios GET 요청을 보낼 때 request body를 설정
 				const response = await axios.get(
-					"https://dd0709.pythonanywhere.com/trip/1/",
+					"https://dd0709.pythonanywhere.com/trip/1/"
 				);
-
-				console.log(response);
+				setItem(response.data);
+				console.log(response.data);
 			} catch (error) {
 				console.error("Error fetching data:", error);
 			}
@@ -38,35 +39,39 @@ const PlanDetail = () => {
 			<DetailContainer>
 				<Title>
 					<SelectedCategoryBar />
-					<TitleText />
-					<TitleInfo />
+					<TitleText>{item.title}</TitleText>
+					<TitleInfo>
+						{item.leader.userFullName} {item.created_at}
+					</TitleInfo>
 				</Title>
-				<ImageBox />
-				<Description />
+				<ImageBox>
+					<img src={item.image} alt="Plan" />
+				</ImageBox>
+				<Description>{item.trip_detail}</Description>
 				<Label>
 					<AiOutlineCalendar /> 모집 기한
 				</Label>
-				<Details />
+				<Details>{item.due_date}</Details>
 				<Label>
 					<CgProfile /> 예상 모집 인원
 				</Label>
-				<Details />
+				<Details>{item.estimated_num}</Details>
 				<Label>
 					<BiWon /> 예상 비용(1인당)
 				</Label>
-				<Details />
+				<Details>{item.estimated_cost}</Details>
 				<Label>
 					<GrLocation /> 방문 장소
 				</Label>
-				<LargerDetails />
+				<LargerDetails>{item.trip_places}</LargerDetails>
 				<Label>
 					<FiMap /> 예상 숙소 지역
 				</Label>
-				<Details />
+				<Details>{item.trip_accmdtn}</Details>
 				<Label>
 					<BiHeadphone /> 오프너 자기소개
 				</Label>
-				<LargerDetails />
+				<LargerDetails>{item.leader.selfIntro}</LargerDetails>
 			</DetailContainer>
 		</Container>
 	);
@@ -106,13 +111,21 @@ const Title = styled.div`
 const TitleText = styled.div`
 	width: 100%;
 	height: 300px;
-	border: 1px solid;
+	font-size: 50px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const TitleInfo = styled.div`
 	width: 100%;
 	height: 100px;
-	border: 1px solid;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px;
+	gap: 30px;
 `;
 
 const ImageBox = styled.div`
@@ -125,10 +138,14 @@ const ImageBox = styled.div`
 
 const Description = styled.div`
 	height: 400px;
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	padding: 20px;
 	margin: 20px;
 	border-radius: 10px;
 	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+	font-size: 18px;
 `;
 
 const Label = styled.div`
@@ -144,6 +161,11 @@ const Details = styled.div`
 	margin: 20px;
 	height: 70px;
 	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	font-size: 17px;
 `;
 
 const LargerDetails = styled.div`
@@ -151,6 +173,11 @@ const LargerDetails = styled.div`
 	margin: 20px;
 	height: 200px;
 	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	font-size: 25px;
 `;
 
 const ButtonContainer = styled.div`
