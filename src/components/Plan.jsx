@@ -23,7 +23,7 @@ const Plan = (props) => {
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>
-			<ImageAndDescriptionWrapper isHovered={hovered}>
+			<ImageAndDescriptionWrapper ishovered={hovered ? "true" : "false"}>
 				<ImageDiv>
 					<Image src={props.imageUrl} />
 				</ImageDiv>
@@ -44,7 +44,7 @@ const Plan = (props) => {
 			</ImageAndDescriptionWrapper>
 			<ZoomIcon
 				onClick={() => {
-					navigate("/detail");
+					navigate(`/detail/`);
 				}}
 				style={{
 					opacity: hovered ? 1 : 0,
@@ -79,11 +79,7 @@ const ImageAndDescriptionWrapper = styled.div`
 	position: relative;
 	transition: filter 0.3s;
 
-	${({ isHovered }) =>
-		isHovered &&
-		`
-		filter: blur(5px);
-	`}
+	filter: ${({ ishovered }) => (ishovered === "true" ? "blur(5px)" : "none")};
 `;
 
 const ImageDiv = styled.div`

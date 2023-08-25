@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import Plan from "../components/Plan";
+import NavBar2 from "../components/NavBar2";
 
 const Allplan = () => {
   const imgUrl = require("../img/PlanImage.png");
@@ -46,7 +47,7 @@ const Allplan = () => {
 
   return (
     <Container>
-      <NavBar />
+      <NavBar/>
       <PlanContainer>
         {items
           .slice(

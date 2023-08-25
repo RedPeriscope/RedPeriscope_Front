@@ -17,8 +17,8 @@ const SelectedCategoryBar = () => {
 	return (
 		<Container>
 			<Category>
-				{category["all"].map((item) => (
-					<SelectedCategoryBox name={item} />
+				{category["all"].map((item, index) => (
+					<SelectedCategoryBox key={index} name={item} />
 				))}
 			</Category>
 		</Container>

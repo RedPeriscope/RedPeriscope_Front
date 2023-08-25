@@ -55,9 +55,9 @@ const CategoryBar = ({displayProperty}) => {
   return (
     <Container>
       <Category>
-        {categoryList.map((category) => (
+        {categoryList.map((category, index) => (
           <EachCategory
-            key={category.displayProperty}
+            key={index}
             category={category}
             categoryClick={checkHandler}
             type={displayProperty}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { styled } from "styled-components";
 import NavBar from "../components/NavBar";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -8,16 +8,38 @@ import { FiMap } from "react-icons/fi";
 import { BiHeadphone } from "react-icons/bi";
 import { BiWon } from "react-icons/bi";
 import SelectedCategoryBar from "../components/SelectedCategoryBar";
+import NavBar2 from "../components/NavBar2";
+import axios from "axios";
 
 const PlanDetail = () => {
+	useEffect(() => {
+		// 데이터를 비동기적으로 가져오는 함수
+		async function fetchData() {
+			try {
+
+				// Axios GET 요청을 보낼 때 request body를 설정
+				const response = await axios.get(
+					"https://dd0709.pythonanywhere.com/trip/1/",
+				);
+
+				console.log(response);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		}
+
+		// fetchData 함수 호출
+		fetchData();
+	}, []); // category가 변경될 때마다 호출
+
 	return (
 		<Container>
-			<NavBar />
+			<NavBar2 />
 			<DetailContainer>
 				<Title>
 					<SelectedCategoryBar />
-          <TitleText/>
-          <TitleInfo/>
+					<TitleText />
+					<TitleInfo />
 				</Title>
 				<ImageBox />
 				<Description />
@@ -48,7 +70,6 @@ const PlanDetail = () => {
 			</DetailContainer>
 		</Container>
 	);
-
 };
 
 const Container = styled.div`
@@ -63,14 +84,12 @@ const Container = styled.div`
 `;
 
 const DetailContainer = styled.div`
-
 	width: 80%;
 	height: 2300px;
 	align-items: center;
 	border-radius: 10px;
 	border: 0.5px solid skyblue;
 	margin: 100px;
-
 `;
 
 const Title = styled.div`
@@ -79,22 +98,22 @@ const Title = styled.div`
 	align-items: center;
 	margin: 20px;
 	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
-  display: flex;
-  flex-direction: column;
-  padding: 5px 10px;
+	display: flex;
+	flex-direction: column;
+	padding: 5px 10px;
 `;
 
 const TitleText = styled.div`
-  width: 100%;
-  height: 300px;
-  border: 1px solid;
-`
+	width: 100%;
+	height: 300px;
+	border: 1px solid;
+`;
 
 const TitleInfo = styled.div`
-  width: 100%;
-  height: 100px;
-  border: 1px solid;
-`
+	width: 100%;
+	height: 100px;
+	border: 1px solid;
+`;
 
 const ImageBox = styled.div`
 	height: 500px;
@@ -135,28 +154,28 @@ const LargerDetails = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 `;
 
 const Button1 = styled.button`
-  width: 100px;
-  height: 30px;
-  color: skyblue;
-  background-color: white;
-  border: 1px solid skyblue;
-  border-radius: 5px;
+	width: 100px;
+	height: 30px;
+	color: skyblue;
+	background-color: white;
+	border: 1px solid skyblue;
+	border-radius: 5px;
 `;
 
 const Button2 = styled.button`
-  width: 100px;
-  height: 30px;
-  color: white;
-  background-color: skyblue;
-  border: 1px solid skyblue;
-  border-radius: 5px;
+	width: 100px;
+	height: 30px;
+	color: white;
+	background-color: skyblue;
+	border: 1px solid skyblue;
+	border-radius: 5px;
 `;
 
 export default PlanDetail;
