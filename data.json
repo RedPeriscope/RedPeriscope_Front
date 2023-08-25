@@ -1,0 +1,46 @@
+{
+  "information": [
+    {  
+        "id": "1",
+        "location": "서울권",
+        "duration": "당일치기",
+        "theme": "힐링"
+    },
+    {
+        "id": "2",
+        "location": "경기/인천",
+        "duration": "3일 이내",
+        "theme": "K-문화체험"
+    },
+    {
+        "id": "3",
+        "location": "강원권",
+        "duration": "일주일 이내",
+        "theme": "유적지 탐방"
+    },
+    {  
+        "id": "4",
+        "location": "충청권",
+        "duration": "일주일 이상",
+        "theme": "식도락"
+    },
+    {  
+        "id": "5",
+        "location": "전라권",
+        "duration": "3일 이내",
+        "theme": "패션쇼핑"
+    },
+    {  
+        "id": "6",
+        "location": "경상권",
+        "duration": "3일 이내",
+        "theme": "식도락"
+    },
+    {  
+        "id": "7",
+        "location": "제주도",
+        "duration": "3일 이내",
+        "theme": "식도락"
+    }
+  ]
+}

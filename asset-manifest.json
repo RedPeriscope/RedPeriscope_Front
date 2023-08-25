@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/RedPeriscope_Front/static/css/main.6c1b6669.css",
+    "main.js": "/RedPeriscope_Front/static/js/main.4d974dc8.js",
+    "static/media/mainBackgroundImg.png": "/RedPeriscope_Front/static/media/mainBackgroundImg.82021ae9e5947abb13ea.png",
+    "static/media/PlanImage.png": "/RedPeriscope_Front/static/media/PlanImage.f2abf4f74c8ce3002dad.png",
+    "static/media/Logo.png": "/RedPeriscope_Front/static/media/Logo.77649aaecf8a751c565b.png",
+    "static/media/LogoBlack.png": "/RedPeriscope_Front/static/media/LogoBlack.9c9eadd810d561c73960.png",
+    "static/media/slick.svg": "/RedPeriscope_Front/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/RedPeriscope_Front/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/RedPeriscope_Front/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/RedPeriscope_Front/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/RedPeriscope_Front/index.html",
+    "main.6c1b6669.css.map": "/RedPeriscope_Front/static/css/main.6c1b6669.css.map",
+    "main.4d974dc8.js.map": "/RedPeriscope_Front/static/js/main.4d974dc8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c1b6669.css",
+    "static/js/main.4d974dc8.js"
+  ]
+}
