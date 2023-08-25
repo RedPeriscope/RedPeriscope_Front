@@ -19,7 +19,7 @@ const NavBar = () => {
 
 const Container = styled.div`
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     display: flex;
     justify-content: space-between; /* 컨텐츠 간 간격을 최대화하여 가장 좌측과 우측에 배치 */
     align-items: center; /* 수직 중앙 정렬 */

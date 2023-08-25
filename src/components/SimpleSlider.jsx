@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FiZoomIn } from "react-icons/fi";
 import Plan from "./Plan";
 
 const imgUrl = require("../img/PlanImage.png");
@@ -24,13 +23,13 @@ const items = [
 export default class SimpleSlider extends Component {
 	render() {
 		const settings = {
-			dots: true,
-			infinite: true,
+			dots: false,
+			infinite: false,
 			speed: 500,
-			slidesToShow: 3,
+			slidesToShow: 4.2,
 			slidesToScroll: 2,
-			arrows: true,
-			centerMode: true,
+			arrow: true,
+			centerMode: false,
 		};
 		return (
 			<Container>
@@ -46,7 +45,6 @@ export default class SimpleSlider extends Component {
 
 const Container = styled.div`
 	overflow: hidden;
-	border: 2px solid;
 	width: 100%;
 	height: 100%;
 `;
@@ -55,61 +53,4 @@ const StyledSlider = styled(Slider)`
 	.slick-slide div {
 		outline: none;
 	}
-`;
-
-const PlanContainer = styled.div`
-	width: 240px;
-	height: 300px;
-	background-color: white;
-	border: 1px solid;
-	border-radius: 22px;
-	padding: 5px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	transition: filter 0.3s;
-	position: relative;
-
-	&:hover {
-		filter: blur(5px);
-	}
-`;
-
-const ImageDiv = styled.div`
-	width: 95%;
-	height: 60%;
-	border-radius: 22px;
-	position: relative;
-`;
-
-const Image = styled.img`
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-`;
-
-const ZoomIcon = styled.div`
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 2rem;
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.7);
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40px;
-	height: 40px;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-	cursor: pointer;
-`;
-
-const Description = styled.div`
-	width: 95%;
-	height: 40%;
-	border: 1px solid;
 `;
