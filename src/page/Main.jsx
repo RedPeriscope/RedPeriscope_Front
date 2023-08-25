@@ -2,6 +2,8 @@ import React from "react";
 import { styled } from "styled-components";
 import SimpleSlider from "../components/SimpleSlider";
 import NavBar from "../components/NavBar";
+import CategoryBar from "../components/CategoryBar";
+
 
 const Main = () => {
 	const backgroundImageUrl = require("../img/mainBackgroundImg.png");
