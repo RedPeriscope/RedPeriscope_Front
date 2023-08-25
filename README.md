@@ -1,11 +1,11 @@
-# 서비스명 블라블라
+# Red Periscope(가제)
 
 <div align="center">
 <img width="329" alt="image" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/bfa67065-c11b-4961-a1b5-3b27cb7e873d">
 </div>
 
 # 2023th Sinchonthon
-> **신촌톤 블라블라팀** <br/>
+> **Red Periscope** <br/>
 
 ## 배포 주소
 
@@ -13,11 +13,11 @@
 
 ## 팀 소개
 
-|      박소영영 <br/> **(기획/디자인)**       |          박영빈 <br/> **(개발/프론트엔드)**          |       정윤지 <br/> **(개발/프론트엔드)**        |       김지은  <br/> **(개발/백엔드)**       |       이재은  <br/> **(개발/백엔드)**       |       박나담  <br/> **(개발/백엔드)**       |       이건화  <br/> **(개발/백엔드)**       |                                                                                                              
+|      박소영 <br/> **(기획/디자인)**       |          박영빈 <br/> **(개발/프론트엔드)**          |       정윤지 <br/> **(개발/프론트엔드)**        |       김지은  <br/> **(개발/백엔드)**       |       이재은  <br/> **(개발/백엔드)**       |       박나담  <br/> **(개발/백엔드)**       |       이건화  <br/> **(개발/백엔드)**       |                                                                                                              
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | 
-|   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/5e1d7e98-b9d2-4deb-a4b6-b94a04267cef" />    |                      <img width="160px" src="https://avatars.githubusercontent.com/u/102040717?v=4" />    |                   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/c205c52a-c1e6-4f6b-8058-e7b4dd9afd80"/>   |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/a91706e5-36e8-418e-92b3-6c9abb3dfa7c" />    |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/a91706e5-36e8-418e-92b3-6c9abb3dfa7c" />    |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/a91706e5-36e8-418e-92b3-6c9abb3dfa7c" />    |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/a91706e5-36e8-418e-92b3-6c9abb3dfa7c" />    |   <img width="160px" src="https://github.com/wooseok123/sinchonthon_readme/assets/59460718/a91706e5-36e8-418e-92b3-6c9abb3dfa7c" />    |
-|   [zhivago-kim](https://www.linkedin.com/in/zhivago-kim)   |    [529539](https://github.com/529539)  |    [THLcode](https://github.com/THLcode)  |    [@wooseok123](https://github.com/wooseok123)  |    [@wooseok123](https://github.com/wooseok123)  |    [@wooseok123](https://github.com/wooseok123)  |    [@wooseok123](https://github.com/wooseok123)  |
-| 연세대학교 체육교육학  | 이화여대 컴퓨터공학 | 홍익대 컴퓨터공학 | 서강대 유럽문화학 | 서강대 유럽문화학 | 서강대 유럽문화학 | 서강대 유럽문화학 |
+|   <img width="160px" src="https://github.com/RedPeriscope/RedPeriscope_Front/assets/90906863/3b86b4f6-3141-40bd-9062-d300b8a090a6" />    |    <img width="160px" src="https://avatars.githubusercontent.com/u/90906863?v=4" />    |                   <img width="160px" src="https://avatars.githubusercontent.com/u/86039030?v=4"/>   |   <img width="160px" src="https://github.com/RedPeriscope/RedPeriscope_Front/assets/90906863/13a46022-720e-436c-a1a1-5ae390c06938" />    |   <img width="160px" src="https://github.com/RedPeriscope/RedPeriscope_Front/assets/90906863/389fb7ed-2910-4b0e-8c5b-57b55ad4f00b" />    |  <img width="160px" src="https://github.com/RedPeriscope/RedPeriscope_Front/assets/90906863/27990c65-8e96-4445-bae3-fc41b1858d17" />    |   <img width="160px" src="https://avatars.githubusercontent.com/u/103306105?v=4" />    |
+|   [jjifff](https://github.com/jjifff)   |    [kkongchii](https://github.com/kkongchii)  |    [jungyungee](https://github.com/jungyungee)  |    [silverjek](https://github.com/silverjek)  |    [babywhale03](https://github.com/babywhale03)  |    [parknadam](https://github.com/parknadam)  |    [Gunhot](https://github.com/Gunhot)  |
+| 홍익대 경영학과  | 홍익대 컴퓨터공학과 | 홍익대 컴퓨터공학과 | 이화여대 영어교육과 | 연세대 인공지능학과 | 이화여대 컴퓨터공학 | 서강대 유럽문화학 |
 
 ## 프로젝트 소개
 
