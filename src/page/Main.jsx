@@ -7,11 +7,11 @@ import SelectedCategoryBar from "../components/SelectedCategoryBar";
 import { useNavigate } from "react-router";
 
 const Main = () => {
-	const backgroundImageUrl = require("../img/mainBackgroundImg.png");
+	const backgroundimageurl = require("../img/mainBackgroundImg.png");
 	const navigate = useNavigate();
 
 	return (
-		<Container backgroundImageUrl={backgroundImageUrl}>
+		<Container backgroundimageurl={backgroundimageurl}>
 			<MainContent>
 				<NavBar />
 				<CategoryBarDiv>
@@ -57,7 +57,7 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url(${(props) => props.backgroundImageUrl});
+	background-image: url(${(props) => props.backgroundimageurl});
 	background-size: contain;
 	background-repeat: no-repeat;
 `;
@@ -65,7 +65,6 @@ const Container = styled.div`
 const MainContent = styled.div`
 	width: 100%;
 	height: 100vh;
-	border: 1px solid;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
