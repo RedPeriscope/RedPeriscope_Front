@@ -48,6 +48,7 @@ const PlanDetail = () => {
 			</DetailContainer>
 		</Container>
 	);
+
 };
 
 const Container = styled.div`
@@ -62,12 +63,14 @@ const Container = styled.div`
 `;
 
 const DetailContainer = styled.div`
+
 	width: 80%;
 	height: 2300px;
 	align-items: center;
 	border-radius: 10px;
 	border: 0.5px solid skyblue;
 	margin: 100px;
+
 `;
 
 const Title = styled.div`
@@ -129,6 +132,31 @@ const LargerDetails = styled.div`
 	margin: 20px;
 	height: 200px;
 	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+`;
+
+const ButtonContainer = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+`;
+
+const Button1 = styled.button`
+  width: 100px;
+  height: 30px;
+  color: skyblue;
+  background-color: white;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+`;
+
+const Button2 = styled.button`
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  border-radius: 5px;
 `;
 
 export default PlanDetail;
