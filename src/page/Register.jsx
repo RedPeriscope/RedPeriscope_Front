@@ -76,7 +76,7 @@ const Register = () => {
       <NavBar />
         <DetailContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Title>오프너 지원하기) 상세페이지 작성</Title>
+          <Title><span class="highlight">오프너 지원하기 )</span> 상세페이지 작성</Title>
 
           <Label>제목</Label>
           <DetailInput
@@ -105,11 +105,13 @@ const Register = () => {
           <Label>
             <AiOutlineCalendar /> 모집 기한
           </Label>
+          <CalContainer>
           <DatePicker
             showIcon
             selected={startDate}
             onChange={(date) => setStartDate(date)}
           />
+          </CalContainer>
 
           <Label>
             <CgProfile /> 예상 모집 인원
@@ -193,7 +195,7 @@ const Container = styled.div`
 
 const DetailContainer = styled.div`
   width: 80%;
-  height: 2600px;
+  height: 2700px;
   align-items: center;
   border-radius: 10px;
   border: 1px solid skyblue;
@@ -209,6 +211,13 @@ const Title = styled.div`
   align-items: center;
   margin: 20px;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+  .highlight {
+    color: skyblue;
+  }
+`;
+
+const CalContainer = styled.div`
+  padding: 20px;
 `;
 
 const ImageBox = styled.div`
@@ -278,6 +287,7 @@ const Button = styled.button`
   background-color: skyblue;
   border: 1px solid skyblue;
   border-radius: 5px;
+  margin: 50px;
   cursor: pointer;
 `;
 export default Register;
