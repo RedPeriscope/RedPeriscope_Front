@@ -80,7 +80,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: skyblue;
 `;
 
 const Category = styled.div`
