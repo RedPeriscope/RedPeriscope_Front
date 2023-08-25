@@ -9,13 +9,23 @@ function CategoryBox(props) {
 
 	const onClick = () => {
 		props.onChange(!props.checked);
-		console.log(props.name);
+		console.log(props.name, props.type);
 		if (props.checked) {
 			// 이미 체크된 상태면 제거
-			setCategory(category.filter((item) => item !== props.name));
+			setCategory((prevCategory) => ({
+				...prevCategory,
+				all: prevCategory.all.filter((item) => item !== props.name),
+				[props.type]: prevCategory[props.type].filter(
+					(item) => item !== props.name
+				),
+			}));
 		} else {
 			// 체크되어 있지 않으면 추가
-			setCategory([...category, props.name]);
+			setCategory((prevCategory) => ({
+				...prevCategory,
+				all: [...prevCategory.all, props.name],
+				[props.type]: [...prevCategory[props.type], props.name],
+			}));
 		}
 	};
 

@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FiZoomIn } from "react-icons/fi";
+import { BsZoomIn } from "react-icons/bs";
+import { useNavigate } from "react-router";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { SelectedCategory } from "../atom/SelectedCategory";
 
-const Plan = ({ imageUrl }) => {
+const Plan = (props) => {
 	const [hovered, setHovered] = useState(false);
+	const navigate = useNavigate();
+	const allCategories = useRecoilValue(SelectedCategory).all;
 
 	const handleMouseEnter = () => {
 		setHovered(true);
@@ -20,16 +25,32 @@ const Plan = ({ imageUrl }) => {
 		>
 			<ImageAndDescriptionWrapper isHovered={hovered}>
 				<ImageDiv>
-					<Image src={imageUrl} />
+					<Image src={props.imageUrl} />
 				</ImageDiv>
-				<Description></Description>
+				<Description>
+					<TripTitle>
+						<Title>{props.title}</Title>
+					</TripTitle>
+					<TripTag>
+						{allCategories.length > 0 ? (
+							<TripTagText>#{allCategories.join(", ")}</TripTagText>
+						) : null}
+					</TripTag>
+					<TripInfo>
+						<Author>{props.author}</Author>
+						<Due>{props.due}</Due>
+					</TripInfo>
+				</Description>
 			</ImageAndDescriptionWrapper>
 			<ZoomIcon
+				onClick={() => {
+					navigate("/detail");
+				}}
 				style={{
 					opacity: hovered ? 1 : 0,
 				}}
 			>
-				<FiZoomIn />
+				<BsZoomIn />
 			</ZoomIcon>
 		</PlanContainer>
 	);
@@ -85,7 +106,6 @@ const ZoomIcon = styled.div`
 	transform: translate(-50%, -50%);
 	font-size: 2rem;
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -103,4 +123,63 @@ const Description = styled.div`
 	border: 1px solid;
 `;
 
+const TripTitle = styled.div`
+	width: 100%;
+	height: 40%;
+`;
+
+const Title = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 20px;
+	width: 100%;
+	height: 100%;
+`;
+const TripTag = styled.div`
+	flex: 1;
+	width: 100%;
+	height: 30%;
+`;
+const TripTagText = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 11px;
+	width: 100%;
+	height: 100%;
+`;
+const TripInfo = styled.div`
+	flex: 1;
+	width: 100%;
+	height: 25%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+`;
+
+const Author = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 12px;
+	width: 100%;
+	height: 100%;
+`;
+const Due = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 12px;
+	width: 100%;
+	height: 100%;
+`;
 export default Plan;

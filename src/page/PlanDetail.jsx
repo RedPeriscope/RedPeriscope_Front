@@ -7,125 +7,131 @@ import { GrLocation } from "react-icons/gr";
 import { FiMap } from "react-icons/fi";
 import { BiHeadphone } from "react-icons/bi";
 import { BiWon } from "react-icons/bi";
+import SelectedCategoryBar from "../components/SelectedCategoryBar";
 
 const PlanDetail = () => {
-  return (
-    <Container>
-      <NavBar />
-      <DetailContainer>
-        <Title>
-            <TagBox />
-            <TitleText />
-            <span>닉네임</span>
-            <span>날짜</span>
-        </Title>
-        <ImageBox />
-        <Description />
-        <Label>
-          <AiOutlineCalendar /> 모집 기한
-        </Label>
-        <Details />
-        <Label>
-          <CgProfile /> 예상 모집 인원
-        </Label>
-        <Details />
-        <Label>
-          <BiWon /> 예상 비용(1인당)
-        </Label>
-        <Details />
-        <Label>
-          <GrLocation /> 방문 장소
-        </Label>
-        <LargerDetails />
-        <Label>
-          <FiMap /> 예상 숙소 지역
-        </Label>
-        <Details />
-        <Label>
-          <BiHeadphone /> 오프너 자기소개
-        </Label>
-        <LargerDetails />
-        <ButtonContainer>
-          <Button1>문의하기</Button1>
-          <Button2>지원하기</Button2>
-        </ButtonContainer>
-      </DetailContainer>
-    </Container>
-  );
+	return (
+		<Container>
+			<NavBar />
+			<DetailContainer>
+				<Title>
+					<SelectedCategoryBar />
+          <TitleText/>
+          <TitleInfo/>
+				</Title>
+				<ImageBox />
+				<Description />
+				<Label>
+					<AiOutlineCalendar /> 모집 기한
+				</Label>
+				<Details />
+				<Label>
+					<CgProfile /> 예상 모집 인원
+				</Label>
+				<Details />
+				<Label>
+					<BiWon /> 예상 비용(1인당)
+				</Label>
+				<Details />
+				<Label>
+					<GrLocation /> 방문 장소
+				</Label>
+				<LargerDetails />
+				<Label>
+					<FiMap /> 예상 숙소 지역
+				</Label>
+				<Details />
+				<Label>
+					<BiHeadphone /> 오프너 자기소개
+				</Label>
+				<LargerDetails />
+			</DetailContainer>
+		</Container>
+	);
+
 };
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 `;
 
 const DetailContainer = styled.div`
-  width: 80%;
-  height: 2300px;
-  align-items: center;
-  border-radius: 10px;
-  border: 1px solid skyblue;
-  margin: 100px;
+
+	width: 80%;
+	height: 2300px;
+	align-items: center;
+	border-radius: 10px;
+	border: 0.5px solid skyblue;
+	margin: 100px;
+
 `;
 
 const Title = styled.div`
-  height: 200px;
-  border-radius: 10px;
-  align-items: center;
-  margin: 20px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
-`;
-
-const TagBox = styled.div`
-
+	height: 200px;
+	border-radius: 10px;
+	align-items: center;
+	margin: 20px;
+	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
 `;
 
 const TitleText = styled.div`
-    
-`;
+  width: 100%;
+  height: 300px;
+  border: 1px solid;
+`
+
+const TitleInfo = styled.div`
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+`
 
 const ImageBox = styled.div`
-  height: 500px;
-  border: 1px solid;
-  border-radius: 10px;
-  align-items: center;
-  margin: 20px;
+	height: 500px;
+	border: 1px solid;
+	border-radius: 10px;
+	align-items: center;
+	margin: 20px;
 `;
 
 const Description = styled.div`
-  height: 400px;
-  align-items: center;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+	height: 400px;
+	align-items: center;
+	margin: 20px;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
 `;
 
 const Label = styled.div`
-  font-weight: 800px;
-  margin: 20px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+	font-weight: 800px;
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
 `;
 
 const Details = styled.div`
-  border-radius: 10px;
-  margin: 20px;
-  height: 70px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+	border-radius: 10px;
+	margin: 20px;
+	height: 70px;
+	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
 `;
 
 const LargerDetails = styled.div`
-  border-radius: 10px;
-  margin: 20px;
-  height: 200px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+	border-radius: 10px;
+	margin: 20px;
+	height: 200px;
+	box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
 `;
 
 const ButtonContainer = styled.div`
@@ -152,4 +158,5 @@ const Button2 = styled.button`
   border: 1px solid skyblue;
   border-radius: 5px;
 `;
+
 export default PlanDetail;
