@@ -1,11 +1,14 @@
 import React from "react";
 import { styled } from "styled-components";
+import CategoryBar from "../components/CategoryBar";
 
 const Main = () => {
 
 	return (
 		<Container>
-			hi
+			<CategoryBar displayProperty="location" />
+			<CategoryBar displayProperty="duration" />
+			<CategoryBar displayProperty="theme" />
 		</Container>
 	);
 };
