@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import SimpleSlider from "../components/SimpleSlider";
 import NavBar from "../components/NavBar";
 import CategoryBar from "../components/CategoryBar";
-
+import SelectedCategoryBar from "../components/SelectedCategoryBar";
 
 const Main = () => {
 	const backgroundImageUrl = require("../img/mainBackgroundImg.png");
@@ -12,11 +12,28 @@ const Main = () => {
 		<Container backgroundImageUrl={backgroundImageUrl}>
 			<MainContent>
 				<NavBar />
-				<CategoryBarDiv />
-				<CategoryBarDiv />
-				<CategoryBarDiv />
+				<CategoryBarDiv>
+					<CategoryType>
+						지역 |
+					</CategoryType>
+					<CategoryBar displayProperty="location" />
+				</CategoryBarDiv>
+				<CategoryBarDiv>
+				<CategoryType>
+						기간 |
+					</CategoryType>
+					<CategoryBar displayProperty="duration" />
+				</CategoryBarDiv>
+				<CategoryBarDiv>
+				<CategoryType>
+						테마 |
+					</CategoryType>
+					<CategoryBar displayProperty="theme" />
+				</CategoryBarDiv>
 				<PlanDiv>
-					<CategoryBarDiv />
+					<CategoryBarDiv>
+						<SelectedCategoryBar />
+					</CategoryBarDiv>
 					<PlanList>
 						<SimpleSlider />
 					</PlanList>
@@ -53,19 +70,30 @@ const MainContent = styled.div`
 
 const CategoryBarDiv = styled.div`
 	width: 90%;
-	height: 5vh;
-	background-color: white;
-	border: 1px solid;
+	height: 8vh;
+	display: flex;
+	justify-content: flex-start;
 `;
+
+const CategoryType = styled.div`
+	width: 10%;
+	height: 8vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	color: white;
+	font-weight: bold;
+
+`
 
 const PlanDiv = styled.div`
 	width: 100%;
-	height: 70vh;
+	height: 60vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	border: 1px solid;
 `;
 
 const PlanList = styled.div`
@@ -82,10 +110,13 @@ const ButtonDiv = styled(CategoryBarDiv)`
 `;
 
 const SeeAllButton = styled.button`
-	background-color: #007bff;
-	color: white;
+	background-color: white;
+	color: black;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 10px rgba(0, 0, 0, 0.2);
 	border: none;
-	padding: 10px 20px;
+	font-size: 20px;
+	padding: 5px 15px;
+	margin-bottom: 20px;
 	border-radius: 5px;
 	cursor: pointer;
 `;

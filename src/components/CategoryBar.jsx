@@ -55,12 +55,6 @@ const CategoryBar = ({displayProperty}) => {
   return (
     <Container>
       <Category>
-        <CategoryBox
-          id="전체"
-          name="전체"
-          checked={checkAll}
-          onChange={checkAllHandler}
-        />
         {categoryList.map((category) => (
           <EachCategory
             key={category.displayProperty}
@@ -75,20 +69,16 @@ const CategoryBar = ({displayProperty}) => {
 
 const Container = styled.div`
   width: 100%;
-  height: 150px;;
+  height: 100%;;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  background-color: skyblue;
 `;
 
 const Category = styled.div`
   display: flex;
-  flex-wrap: wrap;
   width: 70%;
-  margin-left: 350px;
-  margin-bottom: 50px;
 `;
 
 export default CategoryBar;
