@@ -2,9 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { styled } from "styled-components";
 
-const NavBar = () => {
-	const LogoImageUrl = require("../img/Logo.png");
-	const TitleLogoImageUrl = require("../img/TitleLogo.png");
+const NavBar2 = () => {
+	const LogoImageUrl = require("../img/LogoBlack.png");
+	const TitleLogoImageUrl = require("../img/TitleLogoBlack.png");
 	const navigate = useNavigate();
 
 	return (
@@ -47,8 +47,8 @@ const ApplyBtn = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 3px solid white;
-	color: white;
+	border: 3px solid black;
+	color: black;
 	font-size: 18px;
 	font-weight: bold;
 	padding: 6px;
@@ -76,8 +76,8 @@ const TitleLogoImg = styled.img`
 
 const LogoImg = styled.img`
 	width: 250px;
-    height: 150px;
-    object-fit: contain;
+	height: 150px;
+	object-fit: contain;
 `;
 
-export default NavBar;
+export default NavBar2;

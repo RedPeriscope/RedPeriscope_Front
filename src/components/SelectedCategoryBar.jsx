@@ -17,8 +17,8 @@ const SelectedCategoryBar = () => {
 	return (
 		<Container>
 			<Category>
-				{category.map((item) => (
-					<SelectedCategoryBox name={item} />
+				{category["all"].map((item, index) => (
+					<SelectedCategoryBox key={index} name={item} />
 				))}
 			</Category>
 		</Container>
@@ -28,7 +28,7 @@ const SelectedCategoryBar = () => {
 const Container = styled.div`
 	width: 100%;
 	height: 100%;
-    padding: 0 50px;
+    padding: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;

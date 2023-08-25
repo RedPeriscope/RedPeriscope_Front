@@ -55,11 +55,12 @@ const CategoryBar = ({displayProperty}) => {
   return (
     <Container>
       <Category>
-        {categoryList.map((category) => (
+        {categoryList.map((category, index) => (
           <EachCategory
-            key={category.displayProperty}
+            key={index}
             category={category}
             categoryClick={checkHandler}
+            type={displayProperty}
           />
         ))}
       </Category>
@@ -69,7 +70,7 @@ const CategoryBar = ({displayProperty}) => {
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

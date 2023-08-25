@@ -1,6 +1,6 @@
 import CategoryBox from "../util/CategoryBox"
 
-function EachCategory({ category, categoryClick }) {
+function EachCategory({ category, categoryClick, type }) {
   const onChange = checked => {
     categoryClick(category.name, checked);
   }
@@ -10,6 +10,7 @@ function EachCategory({ category, categoryClick }) {
       name={category.name}
       checked={category.isChecked}
       onChange={onChange}
+      type={type}
     >
     {category.name}
     </CategoryBox>

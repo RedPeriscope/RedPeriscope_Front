@@ -4,12 +4,14 @@ import SimpleSlider from "../components/SimpleSlider";
 import NavBar from "../components/NavBar";
 import CategoryBar from "../components/CategoryBar";
 import SelectedCategoryBar from "../components/SelectedCategoryBar";
+import { useNavigate } from "react-router";
 
 const Main = () => {
-	const backgroundImageUrl = require("../img/mainBackgroundImg.png");
+	const backgroundimageurl = require("../img/mainBackgroundImg.png");
+	const navigate = useNavigate();
 
 	return (
-		<Container backgroundImageUrl={backgroundImageUrl}>
+		<Container backgroundimageurl={backgroundimageurl}>
 			<MainContent>
 				<NavBar />
 				<CategoryBarDiv>
@@ -38,7 +40,9 @@ const Main = () => {
 						<SimpleSlider />
 					</PlanList>
 					<ButtonDiv>
-						<SeeAllButton>전체보기</SeeAllButton>
+						<SeeAllButton onClick={() => {
+							navigate("/all");
+						}}>전체보기</SeeAllButton>
 					</ButtonDiv>
 				</PlanDiv>
 			</MainContent>
@@ -53,7 +57,7 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url(${(props) => props.backgroundImageUrl});
+	background-image: url(${(props) => props.backgroundimageurl});
 	background-size: contain;
 	background-repeat: no-repeat;
 `;
@@ -61,7 +65,6 @@ const Container = styled.div`
 const MainContent = styled.div`
 	width: 100%;
 	height: 100vh;
-	border: 1px solid;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -71,6 +74,7 @@ const MainContent = styled.div`
 const CategoryBarDiv = styled.div`
 	width: 90%;
 	height: 8vh;
+	border-radius: 20px;
 	display: flex;
 	justify-content: flex-start;
 `;
