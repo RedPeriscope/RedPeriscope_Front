@@ -123,37 +123,32 @@ $ npm run dev
 │
 └── voluntain-app/ : 프론트엔드
     ├── components/
-    │   ├── NavigationBar.js : 네비게이션 바 컴포넌트, _app.js에서 공통으로 전체 페이지에 포함됨.
-    │   ├── MainBanner.js : 메인 페이지에 있는 남색 배너 컴포넌트, 커뮤니티 이름과 슬로건을 포함.
-    │   ├── RecentLecture.js : 사용자가 시청 정보(쿠키)에 따라, 현재/다음 강의를 나타내는 컴포넌트 [호출: MainCookieCard]
-    │   ├── MainCookieCard.js : 상위 RecentLecture 컴포넌트에서 전달받은 props를 나타내는 레이아웃 컴포넌트.
-    │   ├── MainCard.js : 현재 등록된 course 정보를 백엔드에서 받아서 카드로 나타내는 컴포넌트 [호출: CourseCard]
-    │   └── CourseCard.js : 상위 MainCard 컴포넌트에서 전달받은 props를 나타내는 레이아웃 컴포넌트
+    │   ├── CategoryBar.jsx : 태그에 따른 카테고리 바 내보냄
+    │   ├── NavBar.jsx : 메인 페이지에 있는 배너 컴포넌트, 서비스 이름 포함
+    │   ├── NavBar2.jsx : 배너 컴포넌트 (디자인만 다름)
+    │   ├── Plan.jsx : 목록에서 보여주는 여행 일정 컴포넌트
+    │   ├── SelectedCategoryBar.jsx : 선택된 카테고리 태그들
+    │   ├── SelectedCategoryBox : 선택된 카테고리 담은 컴포넌트
+    │   └── SimpleSlider.jsx : 여행 일정 컴포넌트 좌우로 스크롤 이동 가능
     │
-    ├── config/
-    │   └── next.config.js
+    ├── eachitem/
+    │   └── category.jsx : 카테고리 나타내는 각각의 박스들
     │
-    ├── lib/
-    │   └── ga/
-    │   │   └── index.js
-    │   └── context.js
+    ├── hooks/
+    │   └── useCategory.js :  카테고리 이용 커스텀 훅
+    │     
+    │   
     │
     ├── pages/
-    │   ├── courses/
-    │   │   └── [id].js : 강의 페이지
-    │   ├── _app.js : Next.js에서 전체 컴포넌트 구조를 결정, 공통 컴포넌트(navbar, footer)가 선언되도록 customizing 됨.
-    │   ├── _document.js : Next.js에서 전체 html 문서의 구조를 결정, lang 속성과 meta tag가 customizing 됨.
-    │   ├── about.js : 단체 소개 페이지
-    │   ├── index.js : 메인 페이지
-    │   ├── question.js : Q&A 페이지
-    │   └── setting.js : 쿠키, 구글 애널리틱스 정보 수집 정책 페이지
+    │   ├── Main.jsx : 메인페이지 
+    │   ├── AllPlan.jsx : 메인페이지에서 여행 전체보기로 넘어가면 나오는 여행 전체를 보여주는 페이지
+    │   ├── PlanDetail.jsx : 여행을 선택하면 나오는 상세 페이지
+    │   ├── Register.jsx : 오프너의 여행 신청(등록) 페이지
+    │ 
+    ├── util/  
+    │    ├── CategoryBox.jsx
     │
-    ├── public/
-    │   ├── favicon.ico : 네비게이션바 이미지
-    │   └── logo_about.png : about 페이지 로고 이미지
-    │
-    └── styles/
-        └── Home.module.css
+
 
 ```
 -->
