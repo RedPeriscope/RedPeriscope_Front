@@ -8,30 +8,51 @@ import { FiMap } from "react-icons/fi";
 import { BiHeadphone } from "react-icons/bi";
 import { BiWon } from "react-icons/bi";
 
-const PlanDetail = ()=> {
-    return(
+const PlanDetail = () => {
+  return (
     <Container>
-        <NavBar />
-        <DetailContainer>
-            <Title />
-            <ImageBox />
-            <Description />
-            <Label><AiOutlineCalendar /> 모집 기한</Label>
-            <Details />
-            <Label><CgProfile /> 예상 모집 인원</Label>
-            <Details />
-            <Label><BiWon /> 예상 비용(1인당)</Label>
-            <Details />
-            <Label><GrLocation /> 방문 장소</Label>
-            <LargerDetails />
-            <Label><FiMap /> 예상 숙소 지역</Label>
-            <Details />
-            <Label><BiHeadphone /> 오프너 자기소개</Label>
-            <LargerDetails />
-        </DetailContainer>
+      <NavBar />
+      <DetailContainer>
+        <Title>
+            <TagBox />
+            <TitleText />
+            <span>닉네임</span>
+            <span>날짜</span>
+        </Title>
+        <ImageBox />
+        <Description />
+        <Label>
+          <AiOutlineCalendar /> 모집 기한
+        </Label>
+        <Details />
+        <Label>
+          <CgProfile /> 예상 모집 인원
+        </Label>
+        <Details />
+        <Label>
+          <BiWon /> 예상 비용(1인당)
+        </Label>
+        <Details />
+        <Label>
+          <GrLocation /> 방문 장소
+        </Label>
+        <LargerDetails />
+        <Label>
+          <FiMap /> 예상 숙소 지역
+        </Label>
+        <Details />
+        <Label>
+          <BiHeadphone /> 오프너 자기소개
+        </Label>
+        <LargerDetails />
+        <ButtonContainer>
+          <Button1>문의하기</Button1>
+          <Button2>지원하기</Button2>
+        </ButtonContainer>
+      </DetailContainer>
     </Container>
-    )
-}
+  );
+};
 
 const Container = styled.div`
   width: 100%;
@@ -49,7 +70,7 @@ const DetailContainer = styled.div`
   height: 2300px;
   align-items: center;
   border-radius: 10px;
-  border: 0.5px solid skyblue;
+  border: 1px solid skyblue;
   margin: 100px;
 `;
 
@@ -59,6 +80,14 @@ const Title = styled.div`
   align-items: center;
   margin: 20px;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
+`;
+
+const TagBox = styled.div`
+
+`;
+
+const TitleText = styled.div`
+    
 `;
 
 const ImageBox = styled.div`
@@ -85,7 +114,6 @@ const Label = styled.div`
   gap: 5px;
 `;
 
-
 const Details = styled.div`
   border-radius: 10px;
   margin: 20px;
@@ -100,5 +128,28 @@ const LargerDetails = styled.div`
   box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.2);
 `;
 
+const ButtonContainer = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+`;
 
+const Button1 = styled.button`
+  width: 100px;
+  height: 30px;
+  color: skyblue;
+  background-color: white;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+`;
+
+const Button2 = styled.button`
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+`;
 export default PlanDetail;
