@@ -96,32 +96,32 @@ export default function SimpleSlider() {
 	];
 
 	const code = {
-		"서울권": "R1",
+		서울권: "R1",
 		"경기/인천": "R2",
-		"강원권": "R3",
-		"충청권": "R4",
-		"전라권": "R5",
-		"경상권": "R6",
-		"제주도": "R7",
+		강원권: "R3",
+		충청권: "R4",
+		전라권: "R5",
+		경상권: "R6",
+		제주도: "R7",
 
-		"당일치기": "P1",
+		당일치기: "P1",
 		"3일 이내": "P2",
 		"일주일 이내": "P3",
 		"일주일 이상": "P4",
 
-		"힐링": "T1",
+		힐링: "T1",
 		"K-문화체험": "T2",
 		"유적지 탐방": "T3",
-		"식도락": "T4",
-		"패션쇼핑": "T5",
-	}
+		식도락: "T4",
+		패션쇼핑: "T5",
+	};
 
 	useEffect(() => {
 		// 데이터를 비동기적으로 가져오는 함수
 		async function fetchData() {
 			try {
 				// 동적으로 request body를 구성
-				const requestBody = {"region":"","period":"","theme":"",};
+				const requestBody = { region: "", period: "", theme: "" };
 
 				// category.all 필드가 비어있지 않다면 해당 필드 추가
 				if (category.all.length > 0) {
@@ -148,6 +148,8 @@ export default function SimpleSlider() {
 		// fetchData 함수 호출
 		fetchData();
 	}, [category]); // category가 변경될 때마다 호출
+
+	useEffect(() => {}, [item]);
 
 	const settings = {
 		dots: false,
