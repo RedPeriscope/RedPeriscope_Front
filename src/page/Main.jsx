@@ -12,11 +12,11 @@ const Main = () => {
 		<Container backgroundImageUrl={backgroundImageUrl}>
 			<MainContent>
 				<NavBar />
-				<CategoryBar />
-				<CategoryBar />
-				<CategoryBar />
+				<CategoryBarDiv />
+				<CategoryBarDiv />
+				<CategoryBarDiv />
 				<PlanDiv>
-					<CategoryBar />
+					<CategoryBarDiv />
 					<PlanList>
 						<SimpleSlider />
 					</PlanList>
@@ -51,7 +51,7 @@ const MainContent = styled.div`
 	align-items: center;
 `;
 
-const CategoryBar = styled.div`
+const CategoryBarDiv = styled.div`
 	width: 90%;
 	height: 5vh;
 	background-color: white;
@@ -74,7 +74,7 @@ const PlanList = styled.div`
 	display: flex;
 `;
 
-const ButtonDiv = styled(CategoryBar)`
+const ButtonDiv = styled(CategoryBarDiv)`
 	height: 8vh;
 	display: flex;
 	justify-content: flex-end; /* 버튼을 오른쪽으로 정렬 */
